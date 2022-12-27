@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root{
+--carousel-height: 250px;
+--control-size: 50px;
+}
+*{
+    font-family: 'Roboto',sans-serif;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #1a658a;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+    z-index: 100;
+  }
+  
+
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 3px;
+    color: white;
+   
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #1a658a;
+  }
+  
+  #main {
+    transition: margin-right .5s;
+   
+  }  
+  /* Linkes */
+  .text{
+    font-size: 30px;
+  }
+  
