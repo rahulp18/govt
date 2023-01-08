@@ -1,9 +1,11 @@
 function openNav() {
   document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("toggle").style.display = "none";
   document.getElementById("main").style.marginRight = "250px";
 }
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("toggle").style.display = "block";
   document.getElementById("main").style.marginRight = "0";
 }
 const buttons = document.querySelectorAll("[data-carousel-button]");

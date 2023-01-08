@@ -42,14 +42,19 @@
 
         <!-- Navbar 2 -->
         <div
-          class="md:px-2 px-3 bg-gradient-to-b py-3 from-gray-50 to-gray-100 shadow-sm sticky z-30 top-0"
+          class="md:px-2 px-3 bg-gradient-to-b from-gray-50 to-gray-100 shadow-sm sticky z-30 top-0"
         >
           <div class="flex gap-5 text-black items-center justify-between">
-            <img
-              src="./assets/logo.png"
-              alt="logo"
-              class="md:w-[130px] w-[100px]"
-            />
+            <div class="flex items-center justify-center gap-4">
+              <img
+                src="./assets/logo.png"
+                alt="logo"
+                class="md:h-[80px] h-[60px]"
+              />
+              <h1 class="md:text-4xl text-2xl font-semibold text-[#238223]">
+                Suraksha Kawach
+              </h1>
+            </div>
             <div class="gap-4 items-center justify-center hidden md:flex">
               <a
                 href="https://suraksha-kawach.cometaintellect.com/dashboard/by_gender/Female/"
@@ -69,7 +74,7 @@
         <!-- Mobile Nab -->
         <button
           type="button"
-          class="absolute openbtn block md:hidden text-gray-700 z-40 top-0 right-2"
+          class="absolute openbtn block md:hidden text-gray-700 z-40 top-5 right-2"
           id="toggle"
           onclick="openNav()"
         >
@@ -81,7 +86,11 @@
         <div class="carousel" data-carousel>
           <ul data-slides>
             <li class="slide" data-active>
-              <img src="../assets/hero.png" alt="Nature Image #1" />
+              <img
+                src="../assets/hero.png"
+                alt="Nature Image #1"
+                class="md:object-cover object-none"
+              />
             </li>
           </ul>
         </div>
@@ -92,7 +101,7 @@
         class="flex md:gap-3 flex-wrap justify-between items-start gap-5 w-full px-6 bg-bgSecondary text-white"
       >
         <div
-          class="flex px-1 items-center flex-wrap justify-start gap-3 py-3 md:-mt-10 mt-0"
+          class="flex px-1 items-center flex-wrap justify-center md:justify-start gap-3 py-3 md:-mt-10 mt-0"
         >
           <div class="flex flex-col gap-0 items-center justify-center">
             <div
@@ -160,7 +169,7 @@
         <div
           class="flex flex-wrap md:mt-0 mt-5 items-center justify-between gap-3 bg-bgSecondary bg-gradient-to-r from-green-400 to-blue-500 px-4 py-2 rounded-sm"
         ></div>
-        <div class="md:-mt-20 z-50">
+        <div class="md:-mt-20 z-50 hidden md:block">
           <img
             src="./assets/cm.png"
             alt="cm"
@@ -194,11 +203,6 @@
               <li>Excise</li>
             </ul>
           </div>
-          <div
-            class="absolute bg-green cursor-pointer rounded-md p-2 text-white right-3 bottom-3"
-          >
-            <i class="fa-solid fa-chevron-down"></i>
-          </div>
         </div>
         <!-- Card 2 -->
         <div
@@ -208,7 +212,7 @@
             class="bg-header px-4 py-3 flex w-100% items-center justify-between"
           >
             <h1 class="text-lg">Women and Children Helplines</h1>
-            <i class="fa-solid fa-building-columns"></i>
+            <i class="fa-solid fa-phone"></i>
           </div>
           <div class="px-6 py-4 bg-bodyColor">
             <ul class="list-disc">
@@ -221,11 +225,6 @@
               <li>Odisha Govt. Press</li>
             </ul>
           </div>
-          <div
-            class="absolute bg-green cursor-pointer rounded-md p-2 text-white right-3 bottom-3"
-          >
-            <i class="fa-solid fa-chevron-down"></i>
-          </div>
         </div>
         <!-- Card3 -->
         <div
@@ -235,27 +234,113 @@
             class="bg-header px-4 py-3 flex w-100% items-center justify-between"
           >
             <h1 class="text-lg">Schemes for Women &amp; Children</h1>
-            <img
-              src="https://odisha.gov.in/themes/swf/theme/images/small-odisha-map.png"
-              alt="odisha"
-              class=""
-            />
-          </div>
-          <div class="px-6 py-4 bg-bodyColor">
-            <ul class="list-disc">
-              <li>TODO</li>
-              <li>Art & Crafts</li>
-              <li>Fairs & Festivals</li>
-              <li>Parks & Sanctuaries</li>
-              <li>Shree Jagannath Temple</li>
-              <li>State Archaeology</li>
-              <li>Tourist Points</li>
-            </ul>
+            <img src="./assets/scheme.png" alt="odisha" class="h-8" />
           </div>
           <div
-            class="absolute bg-green cursor-pointer rounded-md p-2 text-white right-3 bottom-3"
+            class="flex flex-col max-h-[200px] gap-2 px-4 py-2 overflow-y-scroll scroll-m-0"
           >
-            <i class="fa-solid fa-chevron-down"></i>
+            <a
+              href="#"
+              class="flex px-2 py-1 rounded-sm hover:bg-white/40 transition-all duration-75 ease-linear cursor-pointer gap-2 items-center justify-start"
+            >
+              <div
+                class="bg-white/80 rounded-full overflow-hidden relative h-12 w-12"
+              >
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZUDc-Alg4DlDVs5rjc6VW6JUYrRhAINQyK9eu9L60&s"
+                  alt="image"
+                  class="w-full h-full rounded-full object-cover"
+                />
+              </div>
+              <div class="flex flex-col gap-1 items-start justify-start">
+                <h1 class="text-md font-semibold">Title</h1>
+              </div>
+            </a>
+            <a
+              href="#"
+              class="flex px-2 py-1 rounded-sm hover:bg-white/40 transition-all duration-75 ease-linear cursor-pointer gap-2 items-center justify-start"
+            >
+              <div
+                class="bg-white/80 rounded-full overflow-hidden relative h-12 w-12"
+              >
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZUDc-Alg4DlDVs5rjc6VW6JUYrRhAINQyK9eu9L60&s"
+                  alt="image"
+                  class="w-full h-full rounded-full object-cover"
+                />
+              </div>
+              <div class="flex flex-col gap-1 items-start justify-start">
+                <h1 class="text-md font-semibold">Title</h1>
+              </div>
+            </a>
+            <a
+              href="#"
+              class="flex px-2 py-1 rounded-sm hover:bg-white/40 transition-all duration-75 ease-linear cursor-pointer gap-2 items-center justify-start"
+            >
+              <div
+                class="bg-white/80 rounded-full overflow-hidden relative h-12 w-12"
+              >
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZUDc-Alg4DlDVs5rjc6VW6JUYrRhAINQyK9eu9L60&s"
+                  alt="image"
+                  class="w-full h-full rounded-full object-cover"
+                />
+              </div>
+              <div class="flex flex-col gap-1 items-start justify-start">
+                <h1 class="text-md font-semibold">Title</h1>
+              </div>
+            </a>
+            <a
+              href="#"
+              class="flex px-2 py-1 rounded-sm hover:bg-white/40 transition-all duration-75 ease-linear cursor-pointer gap-2 items-center justify-start"
+            >
+              <div
+                class="bg-white/80 rounded-full overflow-hidden relative h-12 w-12"
+              >
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZUDc-Alg4DlDVs5rjc6VW6JUYrRhAINQyK9eu9L60&s"
+                  alt="image"
+                  class="w-full h-full rounded-full object-cover"
+                />
+              </div>
+              <div class="flex flex-col gap-1 items-start justify-start">
+                <h1 class="text-md font-semibold">Title</h1>
+              </div>
+            </a>
+            <a
+              href="#"
+              class="flex px-2 py-1 rounded-sm hover:bg-white/40 transition-all duration-75 ease-linear cursor-pointer gap-2 items-center justify-start"
+            >
+              <div
+                class="bg-white/80 rounded-full overflow-hidden relative h-12 w-12"
+              >
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZUDc-Alg4DlDVs5rjc6VW6JUYrRhAINQyK9eu9L60&s"
+                  alt="image"
+                  class="w-full h-full rounded-full object-cover"
+                />
+              </div>
+              <div class="flex flex-col gap-1 items-start justify-start">
+                <h1 class="text-md font-semibold">Title</h1>
+              </div>
+            </a>
+            <a
+              href="#"
+              class="flex px-2 py-1 rounded-sm hover:bg-white/40 transition-all duration-75 ease-linear cursor-pointer gap-2 items-center justify-start"
+            >
+              <div
+                class="bg-white/80 rounded-full overflow-hidden relative h-12 w-12"
+              >
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZUDc-Alg4DlDVs5rjc6VW6JUYrRhAINQyK9eu9L60&s"
+                  alt="image"
+                  class="w-full h-full rounded-full object-cover"
+                />
+              </div>
+              <div class="flex flex-col gap-1 items-start justify-start">
+                <h1 class="text-md font-semibold">Title</h1>
+              </div>
+            </a>
           </div>
         </div>
         <!-- Card 4 -->
@@ -272,13 +357,34 @@
               class=""
             />
           </div>
-          <div class="px-6 py-4 bg-bodyColor">
-            <h1 class="text-md text-right">TODO</h1>
-          </div>
+
           <div
-            class="absolute bg-green cursor-pointer rounded-md p-2 text-white right-3 bottom-3"
+            class="flex flex-col max-h-[200px] gap-2 px-4 py-2 overflow-y-scroll scroll-m-0"
           >
-            <i class="fa-solid fa-chevron-down"></i>
+            <div class="px-4 py-2 bg-white/75 text-black rounded-md">
+              <h1 class="text-md font-semibold">Title</h1>
+              <h1 class="text-sm font-normal">Content</h1>
+            </div>
+            <div class="px-4 py-2 bg-white/75 text-black rounded-md">
+              <h1 class="text-md font-semibold">Title</h1>
+              <h1 class="text-sm font-normal">Content</h1>
+            </div>
+            <div class="px-4 py-2 bg-white/75 text-black rounded-md">
+              <h1 class="text-md font-semibold">Title</h1>
+              <h1 class="text-sm font-normal">Content</h1>
+            </div>
+            <div class="px-4 py-2 bg-white/75 text-black rounded-md">
+              <h1 class="text-md font-semibold">Title</h1>
+              <h1 class="text-sm font-normal">Content</h1>
+            </div>
+            <div class="px-4 py-2 bg-white/75 text-black rounded-md">
+              <h1 class="text-md font-semibold">Title</h1>
+              <h1 class="text-sm font-normal">Content</h1>
+            </div>
+            <div class="px-4 py-2 bg-white/75 text-black rounded-md">
+              <h1 class="text-md font-semibold">Title</h1>
+              <h1 class="text-sm font-normal">Content</h1>
+            </div>
           </div>
         </div>
       </section>
@@ -291,7 +397,7 @@
             <span class="font-bold underline">State of the Art Technology</span>
           </h1>
           <div
-            class="flex flex-wrap gap-5 pb-10 items-center justify-center md:flex-row flex-col mt-8"
+            class="px-2 flex flex-wrap gap-5 pb-10 items-center justify-center md:flex-row flex-col mt-8"
           >
             <div
               class="basis-1/3 max-w-[400px] flex flex-col bg-white rounded-md overflow-hidden cursor-pointer hover:text-white hover:bg-yellow-600 transition-all duration-100 delay-150 ease-in-out"
@@ -302,7 +408,9 @@
                 class="h-[200px] object-cover"
               />
               <div class="px-5 py-2 pb-6">
-                <h1 class="text-xl font-semibold my-3">Safety Zone by Last Seen</h1>
+                <h1 class="text-xl font-semibold my-3">
+                  Safety Zone by Last Seen
+                </h1>
                 <p class="text-sm">
                   Chilika Lake is a brackish water lagoon, Spread Over the Puri,
                   Khurda and Ganjam districts of Odisha state on the east coast
@@ -341,7 +449,9 @@
                 class="h-[200px] object-cover"
               />
               <div class="px-5 py-2 pb-6">
-                <h1 class="text-xl font-semibold my-3">School Attendance &amp; Retention</h1>
+                <h1 class="text-xl font-semibold my-3">
+                  School Attendance &amp; Retention
+                </h1>
                 <p class="text-sm">
                   Chilika Lake is a brackish water lagoon, Spread Over the Puri,
                   Khurda and Ganjam districts of Odisha state on the east coast
@@ -424,153 +534,7 @@
         </div>
       </section>
       <!-- Lists -->
-      <section class="flex flex-wrap md:flex-row flex-col">
-        <div
-          class="pb-3 flex flex-col min-h-[210px] h-auto items-stretch bg-white md:basis-1/5 basis-[100%] bg-cover bg-center bg-[url('https://odisha.gov.in/themes/swf/theme/images/civil-list-bg.jpg')]"
-        >
-          <div class="flex bg-white items-center justify-center px-0 py-[10px]">
-            <h1 class="text-md uppercase font-semibold text-[#B30000]">
-              Civil List
-            </h1>
-          </div>
-          <ul class="list-disc flex flex-col gap-3 px-6 py-4">
-            <li class="text-sm text-white capitalize cursor-pointer">
-              Indian Administrative Services
-            </li>
-            <li class="text-sm text-white capitalize cursor-pointer">
-              Indian Police Services
-            </li>
-            <li class="text-sm text-white capitalize cursor-pointer">
-              Indian Forest Services
-            </li>
-            <li class="text-sm text-white capitalize cursor-pointer">
-              Odisha Administrative Services
-            </li>
-          </ul>
-          <div class="flex items-center justify-center">
-            <button
-              class="bg-white text-sm px-4 py-1 rounded-xl mt-4 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 delay-100 ease-in-out"
-            >
-              Read more
-            </button>
-          </div>
-        </div>
-        <!-- Second -->
-        <div
-          class="flex pb-3 flex-col min-h-[210px] h-auto items-stretch bg-white md:basis-1/5 basis-[100%] bg-cover bg-center bg-[url('https://odisha.gov.in/themes/swf/theme/images/policy-publication.jpg')]"
-        >
-          <div class="flex bg-white items-center justify-center px-0 py-[10px]">
-            <h1 class="text-md uppercase font-semibold text-[#B30000]">
-              Policies & Publications
-            </h1>
-          </div>
-          <ul class="list-disc flex flex-col gap-3 px-6 py-4">
-            <li class="text-sm text-white capitalize cursor-pointer">
-              Indian Administrative Services
-            </li>
-            <li class="text-sm text-white capitalize cursor-pointer">
-              Indian Police Services
-            </li>
-            <li class="text-sm text-white capitalize cursor-pointer">
-              Indian Forest Services
-            </li>
-            <li class="text-sm text-white capitalize cursor-pointer">
-              Odisha Administrative Services
-            </li>
-          </ul>
-          <div class="flex items-center justify-center">
-            <button
-              class="bg-white text-sm px-4 py-1 rounded-xl mt-4 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 delay-100 ease-in-out"
-            >
-              Read more
-            </button>
-          </div>
-        </div>
-        <div
-          class="flex pb-3 flex-col min-h-[210px] h-auto items-stretch bg-white md:basis-1/5 basis-[100%] bg-cover bg-center bg-[url('https://odisha.gov.in/themes/swf/theme/images/odisha-tribal.jpg')]"
-        >
-          <div class="flex bg-white items-center justify-center px-0 py-[10px]">
-            <h1 class="text-md uppercase font-semibold text-[#B30000]">
-              Odia Virtual Academy
-            </h1>
-          </div>
-          <ul class="list-disc flex flex-col gap-3 px-6 py-4">
-            <li class="text-sm text-white capitalize cursor-pointer">
-              Purpose
-            </li>
-            <li class="text-sm text-white capitalize cursor-pointer">
-              Research & Developement
-            </li>
-            <li class="text-sm text-white capitalize cursor-pointer">Vision</li>
-            <li class="text-sm text-white capitalize cursor-pointer">
-              Objective
-            </li>
-          </ul>
-          <div class="flex items-center justify-center">
-            <button
-              class="bg-white text-sm px-4 py-1 rounded-xl mt-4 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 delay-100 ease-in-out"
-            >
-              Read more
-            </button>
-          </div>
-        </div>
-        <div
-          class="flex pb-3 flex-col min-h-[210px] h-auto items-stretch bg-white md:basis-1/5 basis-[100%] bg-cover bg-center bg-[url('https://odisha.gov.in/themes/swf/theme/images/eminent_personalities.jpg')]"
-        >
-          <div class="flex bg-white items-center justify-center px-0 py-[10px]">
-            <h1 class="text-md uppercase font-semibold text-[#B30000]">
-              Eminent Personalities
-            </h1>
-          </div>
-          <ul class="list-disc flex flex-col gap-3 px-6 py-4">
-            <li class="text-sm text-white capitalize cursor-pointer">
-              Purpose
-            </li>
-            <li class="text-sm text-white capitalize cursor-pointer">
-              Research & Developement
-            </li>
-            <li class="text-sm text-white capitalize cursor-pointer">Vision</li>
-            <li class="text-sm text-white capitalize cursor-pointer">
-              Objective
-            </li>
-          </ul>
-          <div class="flex items-center justify-center">
-            <button
-              class="bg-white text-sm px-4 py-1 rounded-xl mt-4 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 delay-100 ease-in-out"
-            >
-              Read more
-            </button>
-          </div>
-        </div>
-        <div
-          class="flex pb-3 flex-col min-h-[210px] h-auto items-stretch bg-white md:basis-1/5 basis-[100%] bg-cover bg-center bg-[url('https://odisha.gov.in/themes/swf/theme/images/krushi_bhawan.jpg')]"
-        >
-          <div class="flex bg-white items-center justify-center px-0 py-[10px]">
-            <h1 class="text-md uppercase font-semibold text-[#B30000]">
-              Awards
-            </h1>
-          </div>
-          <ul class="list-disc flex flex-col gap-3 px-6 py-4">
-            <li class="text-sm text-white capitalize cursor-pointer">
-              Purpose
-            </li>
-            <li class="text-sm text-white capitalize cursor-pointer">
-              Research & Developement
-            </li>
-            <li class="text-sm text-white capitalize cursor-pointer">Vision</li>
-            <li class="text-sm text-white capitalize cursor-pointer">
-              Objective
-            </li>
-          </ul>
-          <div class="flex items-center justify-center">
-            <button
-              class="bg-white text-sm px-4 py-1 rounded-xl mt-4 text-red-600 hover:bg-red-600 hover:text-white transition-all duration-200 delay-100 ease-in-out"
-            >
-              Read more
-            </button>
-          </div>
-        </div>
-      </section>
+
       <!-- Odisha Galery section -->
       <section class="bg-green md:py-6 flex items-center flex-col">
         <h1 class="text-[36px] text-center text-white">
@@ -579,21 +543,11 @@
         <div
           class="md:max-w-[960px] flex items-start gap-3 justify-center mt-8 md:flex-row flex-col"
         >
-          <div
-            class="flex gap-1 flex-col items-start basis-[100%] md:basis-2/3"
-          >
-            <div class="flex">
-              <button class="px-[25px] text-sm py-[6px] bg-white capitalize">
-                Photo Gallery
-              </button>
-              <button
-                class="px-[25px] py-[6px] text-sm bg-[#01404e] text-white capitalize"
-              >
-                View All
-              </button>
-            </div>
-            <div class="flex flex-col md:flex-row items-stretch gap-2">
-              <div class="basis-3/4">
+          <div class="flex gap-1 flex-col items-start basis-[100%]">
+            <div
+              class="flex flex-col md:flex-row items-stretch flex-wrap gap-2"
+            >
+              <div class="">
                 <img
                   src="https://odisha.gov.in/sites/default/files/styles/state_home_photo_gallary/public/2020-06/DJI_0074.jpg?itok=CwhpeTeg"
                   alt="image"
@@ -601,13 +555,14 @@
                 />
               </div>
               <div
-                class="basis-1/4 flex md:flex-col flex-row gap-1 md:px-0 px-2"
+                class="flex flex-row gap-2 md:flex-col flex-wrap md:pb-0 pb-5"
               >
                 <img
                   src="https://odisha.gov.in/sites/default/files/styles/state_home_photo_gallary/public/2020-06/DJI_0074.jpg?itok=CwhpeTeg"
                   alt="k"
                   class="md:h-[113px] h-auto w-[33%] md:w-auto object-cover"
                 />
+
                 <img
                   src="https://odisha.gov.in/sites/default/files/styles/state_home_photo_gallary/public/2020-06/DJI_0048.JPG?itok=rTAp6WS7"
                   alt="k"
@@ -621,150 +576,10 @@
               </div>
             </div>
           </div>
-          <div
-            class="flex gap-1 flex-col items-start justify-start basis-[100%] w-full md:basis-1/3"
-          >
-            <div class="flex">
-              <button class="px-[25px] text-sm py-[6px] bg-white capitalize">
-                Video Gallery
-              </button>
-              <button
-                class="px-[25px] py-[6px] text-sm bg-[#01404e] text-white capitalize"
-              >
-                View All
-              </button>
-            </div>
-            <div class="w-full h-full md:px-0 px-4">
-              <iframe
-                width="100%"
-                src="https://www.youtube.com/embed/gUwhFgtPFbk"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
         </div>
       </section>
       <!-- Contact us -->
-      <section
-        class="bg-green px-4 py-6 flex gap-2 md:flex-row flex-col justify-center items-stretch"
-      >
-        <!-- Card1 -->
-        <div
-          class="rounded-lg bg-bodyColor md:basis-1/4 basis-[100%] overflow-hidden text-white h-auto relative"
-        >
-          <div
-            class="bg-header px-4 py-3 flex w-100% items-center justify-between"
-          >
-            <h1 class="text-lg">Commissions</h1>
-            <img
-              src="https://odisha.gov.in/themes/swf/theme/images/home2.png"
-              alt="odisha"
-              class=""
-            />
-          </div>
-          <div class="px-6 py-4 bg-bodyColor">
-            <ul class="list-disc">
-              <li>State Election Commission</li>
-              <li>State Cooperative Election</li>
-              <li>Commission</li>
-              <li>Odisha State Food Commission</li>
-              <li>Odisha Sub-ordinate Staff Selection Commission</li>
-              <li>State Administrative Tribunal</li>
-            </ul>
-          </div>
-          <div
-            class="absolute bg-green cursor-pointer rounded-md p-2 text-white right-3 bottom-3"
-          >
-            <i class="fa-solid fa-chevron-down"></i>
-          </div>
-        </div>
-        <!-- Card 2 -->
-        <div
-          class="rounded-lg bg-bodyColor overflow-hidden md:basis-1/4 basis-[100%] text-white h-auto relative"
-        >
-          <div
-            class="bg-header px-4 py-3 flex w-100% items-center justify-between"
-          >
-            <h1 class="text-lg">Odisha Map</h1>
-            <img
-              src="https://odisha.gov.in/themes/swf/images/mapicon.png"
-              alt="odisha"
-              class=""
-            />
-          </div>
-          <div class="px-6 py-4 flex items-center justify-center bg-bodyColor">
-            <img
-              src="https://www.google.com/maps/d/thumbnail?mid=1dMI4hfvmxFzjNN5Ao27aiPC3Gdk&hl=en"
-              alt="odisha"
-              class="h-[210px] w-[90%] rounded-md"
-            />
-          </div>
-        </div>
-        <!-- Card3 -->
-        <div
-          class="rounded-lg bg-bodyColor overflow-hidden text-white h-auto md:basis-1/4 basis-4/4 relative"
-        >
-          <div
-            class="bg-header px-4 py-3 flex w-100% items-center justify-between"
-          >
-            <h1 class="text-sm bg-[#4267B2] px-2 py-1 rounded-sm">Facebook</h1>
-          </div>
-          <div class="px-6 py-4 flex items-center justify-center bg-bodyColor">
-            <img
-              src="https://odishabytes.com/wp-content/uploads/2019/06/CM-Naveen-Patnaik.jpg.webp"
-              alt="odisha"
-              class="h-[210px] w-[90%] rounded-md object-cover bg-black opacity-75"
-            />
-          </div>
-          <div
-            class="absolute bg-green cursor-pointer rounded-md p-2 text-white right-3 bottom-3"
-          >
-            <i class="fa-solid fa-chevron-down"></i>
-          </div>
-        </div>
-        <!-- Card 4 -->
-        <div
-          class="rounded-lg bg-bodyColor overflow-hidden text-white h-auto md:basis-1/4 basis-4/4 relative"
-        >
-          <div
-            class="bg-header px-4 py-3 flex w-100% items-center justify-between"
-          >
-            <h1 class="text-lg">Important Office Orders</h1>
-            <img
-              src="https://odisha.gov.in/themes/swf/theme/images/office-order.png"
-              alt="odisha"
-              class=""
-            />
-          </div>
-          <div class="px-6 py-4 bg-bodyColor">
-            <ul class="flex flex-col gap-4 list-disc">
-              <li class="flex items-start gap-1">
-                <div class="">
-                  <h1 class="bg-[#154f97] text-white text-center">10</h1>
-                  <h1 class="bg-white text-xs text-black px-1">20 dec 2022</h1>
-                </div>
-                <p class="text-sm text-white w-[70%]">
-                  Creation of new Department named " Department of Mission
-                  Shakti"
-                </p>
-              </li>
-              <li class="flex items-start gap-1">
-                <div class="">
-                  <h1 class="bg-[#154f97] text-white text-center">10</h1>
-                  <h1 class="bg-white text-xs text-black px-1">20 dec 2022</h1>
-                </div>
-                <p class="text-sm text-white w-[70%]">
-                  Creation of new Department named " Department of Mission
-                  Shakti"
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
+
       <section class="bg-white px-4">
         <div class="flex items-center justify-center gap-3">
           <img
@@ -793,38 +608,40 @@
           <h1 class="text-sm text-white px-4">State Holidays</h1>
         </div>
         <div class="bg-footerBg mx-4 px-4 py-6">
-          <div class="flex flex-wrap gap-5 items-center">
-            <div class="flex flex-col gap-3 items-start justify-start">
-              <h1 class="text-[15px] font-semibold uppercase text-[#a6b4bd]">
-                Important Links
-              </h1>
-              <div class="flex flex-col gap-1">
-                <p class="text-sm text-[#a6b4bd]">
-                  All Tenders/Quotations call Notices
-                </p>
-                <p class="text-sm text-[#a6b4bd]">All Advertisements</p>
-                <p class="text-sm text-[#a6b4bd]">e-Procurement</p>
-                <p class="text-sm text-[#a6b4bd]">Tender.gov.in</p>
-                <p class="text-sm text-[#a6b4bd]">Sachet.rbi.org.in</p>
+          <div class="flex flex-wrap gap-5 items-start justify-between">
+            <div class="flex flex-wrap gap-5">
+              <div class="flex flex-col gap-3 items-start justify-start">
+                <h1 class="text-[15px] font-semibold uppercase text-[#a6b4bd]">
+                  Important Links
+                </h1>
+                <div class="flex flex-col gap-1">
+                  <p class="text-sm text-[#a6b4bd]">
+                    All Tenders/Quotations call Notices
+                  </p>
+                  <p class="text-sm text-[#a6b4bd]">All Advertisements</p>
+                  <p class="text-sm text-[#a6b4bd]">e-Procurement</p>
+                  <p class="text-sm text-[#a6b4bd]">Tender.gov.in</p>
+                  <p class="text-sm text-[#a6b4bd]">Sachet.rbi.org.in</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 items-start justify-start">
+                <h1 class="text-[15px] font-semibold uppercase text-[#a6b4bd]">
+                  Other Links
+                </h1>
+                <div class="flex flex-col gap-1">
+                  <p class="text-sm text-[#a6b4bd]">
+                    All Tenders/Quotations call Notices
+                  </p>
+                  <p class="text-sm text-[#a6b4bd]">All Advertisements</p>
+                  <p class="text-sm text-[#a6b4bd]">e-Procurement</p>
+                  <p class="text-sm text-[#a6b4bd]">Tender.gov.in</p>
+                  <p class="text-sm text-[#a6b4bd]">Sachet.rbi.org.in</p>
+                </div>
               </div>
             </div>
             <div class="flex flex-col gap-3 items-start justify-start">
               <h1 class="text-[15px] font-semibold uppercase text-[#a6b4bd]">
-                Other Links
-              </h1>
-              <div class="flex flex-col gap-1">
-                <p class="text-sm text-[#a6b4bd]">
-                  All Tenders/Quotations call Notices
-                </p>
-                <p class="text-sm text-[#a6b4bd]">All Advertisements</p>
-                <p class="text-sm text-[#a6b4bd]">e-Procurement</p>
-                <p class="text-sm text-[#a6b4bd]">Tender.gov.in</p>
-                <p class="text-sm text-[#a6b4bd]">Sachet.rbi.org.in</p>
-              </div>
-            </div>
-            <div class="flex flex-col gap-3 items-start justify-start">
-              <h1 class="text-[15px] font-semibold uppercase text-[#a6b4bd]">
-                Related Links
+                Contact Us
               </h1>
               <div class="flex flex-col gap-1">
                 <p class="text-sm text-[#a6b4bd]">
@@ -845,11 +662,6 @@
                 <p class="text-sm text-[#a6b4bd]">
                   Guidelines for Indian Govt. Websites
                 </p>
-                <button
-                  class="px-3 bg-[#1f4b7b] w-[220px] mt-6 py-1 rounded-sm text-white"
-                >
-                  Total Visitors : 28,516,570 (AC01)
-                </button>
               </div>
             </div>
           </div>
@@ -857,19 +669,7 @@
             class="flex items-center flex-wrap gap-4 justify-center mt-6 border-y-[1px] py-1 border-[#a6b4bd]"
           >
             <h1 class="text-sm uppercase text-[#a6b4bd] cursor-pointer">
-              Home
-            </h1>
-            <h1 class="text-sm uppercase text-[#a6b4bd] cursor-pointer">
-              CONTACT US
-            </h1>
-            <h1 class="text-sm uppercase text-[#a6b4bd] cursor-pointer">
-              feedback
-            </h1>
-            <h1 class="text-sm uppercase text-[#a6b4bd] cursor-pointer">
-              wEBSITE POLICY
-            </h1>
-            <h1 class="text-sm uppercase text-[#a6b4bd] cursor-pointer">
-              Help
+              All rights are reserved
             </h1>
           </div>
           <p class="text-xs text-[#a6b4bd] text-center mt-2">
