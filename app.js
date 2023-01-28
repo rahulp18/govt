@@ -26,3 +26,48 @@ buttons.forEach((button) => {
     delete activeSlide.dataset.active;
   });
 });
+
+let slider = tns({
+  container: ".my-slider",
+  items: 3,
+  speed: 300,
+  autoplay: true,
+  autoplayHoverPause: true,
+  autoplayTimeout: 3500,
+  autoplayText: ["▶", "❚❚"],
+  swipeAngle: false,
+  prevButton: ".previous",
+  nextButton: ".next",
+  responsive: {
+    1600: {
+      items: 4,
+      controls: true,
+      edgePadding: 30,
+      gutter: 20,
+    },
+    1024: {
+      items: 3,
+      controls: true,
+      edgePadding: 30,
+      gutter: 20,
+    },
+    768: {
+      items: 2,
+      controls: true,
+      edgePadding: 30,
+      gutter: 20,
+    },
+    100: {
+      items: 1,
+      controls: true,
+      edgePadding: 30,
+      gutter: 20,
+    },
+    350: {
+      items: 1,
+      controls: true,
+      edgePadding: 30,
+      gutter: 20,
+    },
+  },
+});

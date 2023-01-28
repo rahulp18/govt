@@ -13,6 +13,11 @@
     />
     <link rel="stylesheet" href="./carousel.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
   </head>
   <script
     src="https://kit.fontawesome.com/82791934bd.js"
@@ -544,42 +549,81 @@
 
       <!-- Odisha Galery section -->
       <section class="bg-green md:py-6 flex items-center flex-col">
-        <h1 class="text-[36px] text-center text-white">
-          Media <span class="font-bold">Gallery</span>
-        </h1>
-        <div
-          class="md:max-w-[960px] flex items-start gap-3 justify-center mt-8 md:flex-row flex-col"
-        >
-          <div class="flex gap-1 flex-col items-start basis-[100%]">
-            <div
-              class="flex flex-col md:flex-row items-stretch flex-wrap gap-2"
-            >
-              <div class="">
-                <img
-                  src="https://odisha.gov.in/sites/default/files/styles/state_home_photo_gallary/public/2020-06/DJI_0074.jpg?itok=CwhpeTeg"
-                  alt="image"
-                  class="w-full h-full"
-                />
-              </div>
-              <div
-                class="flex flex-row gap-2 md:flex-col flex-wrap md:pb-0 pb-5"
-              >
-                <img
-                  src="https://odisha.gov.in/sites/default/files/styles/state_home_photo_gallary/public/2020-06/DJI_0074.jpg?itok=CwhpeTeg"
-                  alt="k"
-                  class="md:h-[113px] h-auto w-[33%] md:w-auto object-cover"
-                />
-
-                <img
-                  src="https://odisha.gov.in/sites/default/files/styles/state_home_photo_gallary/public/2020-06/DJI_0048.JPG?itok=rTAp6WS7"
-                  alt="k"
-                  class="md:h-[113px] h-auto w-[33%] md:w-auto object-cover"
-                />
-                <img
-                  src="https://odisha.gov.in/sites/default/files/styles/state_home_photo_gallary/public/2020-06/DJI_0005.JPG?itok=gAoRYbcg"
-                  alt="k"
-                  class="md:h-[113px] h-auto w-[33%] md:w-auto object-cover"
-                />
+        <div id="slider">
+          <div class="container">
+            <div class="subcontainer">
+              <div class="slider-wrapper">
+                <div class="text-3xl font-semibold font-roboto text-center">
+                  Media Gallery
+                </div>
+                <br />
+                <div class="my-slider">
+                  <div class="">
+                    <div class="slide">
+                      <div class="slide-img img-1">
+                        <!-- <a href="#">Odisha</a> -->
+                      </div>
+                      <div class="flex items-center justify-center gap-2 py-2">
+                        <h3>Cuttack</h3>
+                        <p>Choudwar</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="slide">
+                      <div class="slide-img img-2">
+                        <!-- <a href="#">Odisha</a> -->
+                      </div>
+                      <div class="flex items-center justify-center gap-2 py-2">
+                        <h3>Cuttack</h3>
+                        <p>Choudwar</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="slide">
+                      <div class="slide-img img-3">
+                        <!-- <a href="#">Odisha</a> -->
+                      </div>
+                      <div class="flex items-center justify-center gap-2 py-2">
+                        <h3>Cuttack</h3>
+                        <p>Choudwar</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="slide">
+                      <div class="slide-img img-4">
+                        <!-- <a href="#">Odisha</a> -->
+                      </div>
+                      <div class="flex items-center justify-center gap-2 py-2">
+                        <h3>Cuttack</h3>
+                        <p>Choudwar</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="slide">
+                      <div class="slide-img img-5">
+                        <!-- <a href="#">Odisha</a> -->
+                      </div>
+                      <div class="flex items-center justify-center gap-2 py-2">
+                        <h3>Cuttack</h3>
+                        <p>Choudwar</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="previous bg-white border-2 border-white text-black rounded-md px-2 py-1"
+                >
+                  Prev
+                </button>
+                <button
+                  class="next bg-transparent border-2 border-white text-white rounded-md px-2 py-1"
+                >
+                  Next
+                </button>
               </div>
             </div>
           </div>
