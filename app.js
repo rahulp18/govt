@@ -32,7 +32,7 @@ let slider = tns({
   items: 3,
   speed: 300,
   autoplay: true,
-  autoplayHoverPause: true,
+  autoplayHoverPause: false,
   autoplayTimeout: 3500,
   autoplayText: ["▶", "❚❚"],
   swipeAngle: false,
