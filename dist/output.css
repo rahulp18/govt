@@ -958,6 +958,11 @@ video {
      object-fit: cover;
 }
 
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
 .p-3 {
   padding: 0.75rem;
 }
