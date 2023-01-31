@@ -84,7 +84,7 @@ body {
 }
 
 #slider{
-  height: 500px;
+  height: auto;
   width: 100%;
   color: white;
   display: flex;
@@ -96,7 +96,7 @@ body {
   margin: auto;
 }
 .subcontainer{
-  width:85%;
+  width:95%;
   margin: auto;
 }
 .slide-img{
