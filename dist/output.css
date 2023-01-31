@@ -714,6 +714,10 @@ video {
   width: 120px;
 }
 
+.w-\[62px\] {
+  width: 62px;
+}
+
 .max-w-\[400px\] {
   max-width: 400px;
 }
@@ -1404,6 +1408,10 @@ video {
 
   .md\:w-\[140px\] {
     width: 140px;
+  }
+
+  .md\:w-\[120px\] {
+    width: 120px;
   }
 
   .md\:basis-1\/4 {
