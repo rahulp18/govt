@@ -638,6 +638,10 @@ video {
   display: flex;
 }
 
+.list-item {
+  display: list-item;
+}
+
 .hidden {
   display: none;
 }
@@ -742,6 +746,10 @@ video {
 
 .scroll-m-0 {
   scroll-margin: 0px;
+}
+
+.list-outside {
+  list-style-position: outside;
 }
 
 .list-none {
@@ -1151,6 +1159,11 @@ video {
 
 .capitalize {
   text-transform: capitalize;
+}
+
+.lining-nums {
+  --tw-numeric-figure: lining-nums;
+  font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
 }
 
 .text-white {
