@@ -759,6 +759,10 @@ video {
   gap: 0.5rem;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .self-start {
   align-self: flex-start;
 }
@@ -1240,6 +1244,10 @@ video {
 
   .md\:w-\[120px\] {
     width: 120px;
+  }
+
+  .md\:w-\[100px\] {
+    width: 100px;
   }
 
   .md\:basis-1\/4 {
