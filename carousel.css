@@ -153,9 +153,7 @@ opacity: 1;
 .img-9{
   background-image: url('../assets/img9.jpeg');
 }
-.img-10{
-  background-image: url('../assets/img10.jpeg');
-}
+
  
 @media(max-width:1600px){
 .container{
