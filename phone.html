@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--https://medium.com/front-end-weekly/firebase-phone-authentication-web-tutorial-2019-29f5f5c97839-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>OTP</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body>
+    <div id="holder" style="max-width: 240px; margin: auto">
+      <div id="done"></div>
+      <h2>OTP Sign Up</h2>
+      <!-- Add two inputs for "phoneNumber" and "code" -->
+      <!-- Add two buttons to submit the inputs -->
+      Phone Number:<br />
+      <input
+        type="tel"
+        id="phoneNumber"
+        class="w3-input w3-border w3-round-large"
+        style="width: 200px"
+      /><br />
+      <button
+        id="sign-in-button"
+        class="w3-btn w3-ripple w3-blue w3-round-large"
+        style="width: 200px"
+      >
+        SIGN IN WITH PHONE</button
+      ><br /><br /><br />
+
+      <!-- Add a container for reCaptcha -->
+      <div id="recaptcha-container"></div>
+      <br /><br />
+
+      OTP Code:<br />
+      <input
+        type="text"
+        id="code"
+        class="w3-input w3-border w3-round-large"
+        style="width: 200px"
+      /><br />
+      <button
+        id="confirm-code"
+        class="w3-btn w3-ripple w3-blue w3-round-large"
+        style="width: 200px"
+      >
+        ENTER CODE
+      </button>
+      <p id="notes" style="max-width: 200px; word-wrap: break-word">
+        1. Enter phone number with + and country code, then click Sign In with
+        Phone<br />2. Complete the recaptcha 3. Get the OTP code from your SMS
+        and type/paste it in, then click Enter Code
+      </p>
+    </div>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"
+    ></script>
+
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"
+    ></script>
+
+    // ...
+
+    <script defer src="./init-firebase.js"></script>
+
+    <script type="module">
+      // Place your config here
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+      import {
+        getDatabase,
+        set,
+        ref,
+        update,
+      } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+      import {
+        getAuth,
+        signInWithPhoneNumber,
+        onAuthStateChanged,
+        signOut,
+        RecaptchaVerifier,
+      } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+      var firebaseConfig = {
+        apiKey: "AIzaSyA8cxJONjfT7QORiwlSEm35UIK6e1HGzNs",
+        authDomain: "protect-13b9b.firebaseapp.com",
+        databaseURL: "https://protect-13b9b-default-rtdb.firebaseio.com",
+        projectId: "protect-13b9b",
+        storageBucket: "protect-13b9b.appspot.com",
+        messagingSenderId: "508816152272",
+        appId: "1:508816152272:web:2cae80241acbbe5c4830d5",
+      };
+      firebase.initializeApp(firebaseConfig);
+      //   const app = initializeApp(firebaseConfig);
+      //   const database = getDatabase(app);
+      //   const auth = getAuth();
+      //   firebase.auth().settings.appVerificationDisabledForTesting = true;
+      //   Create a Recaptcha verifier instance globally
+      //   Calls submitPhoneNumberAuth() when the captcha is verified
+      window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
+        "recaptcha-container",
+        {
+          size: "normal",
+          callback: function (response) {
+            submitPhoneNumberAuth();
+          },
+        }
+      );
+      function submitPhoneNumberAuth() {
+        var phoneNumber = document.getElementById("phoneNumber").value;
+        var appVerifier = window.recaptchaVerifier;
+        firebase
+          .auth()
+          .signInWithPhoneNumber(phoneNumber, appVerifier)
+          .then(function (confirmationResult) {
+            window.confirmationResult = confirmationResult;
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      }
+
+      // This function runs when the 'sign-in-button' is clicked
+      // Takes the value from the 'phoneNumber' input and sends SMS to that phone number
+      document
+        .getElementById("sign-in-button")
+        .addEventListener("click", submitPhoneNumberAuth);
+
+      function submitPhoneNumberAuthCode() {
+        var code = document.getElementById("code").value;
+        confirmationResult
+          .confirm(code)
+          .then(function (result) {
+            var user = result.user;
+            //console.log(user);
+            document.getElementById("done").innerHTML = "OTP completed";
+            window.AppInventor.setWebViewString(JSON.stringify(user));
+          })
+          .catch(function (error) {
+            console.log(error);
+            document.getElementById("done").innerHTML = error;
+          });
+      }
+
+      // This function runs when the 'confirm-code' button is clicked
+      // Takes the value from the 'code' input and submits the code to verify the phone number
+      // Return a user object if the authentication was successful, and auth is complete
+      document
+        .getElementById("confirm-code")
+        .addEventListener("click", submitPhoneNumberAuthCode);
+
+      //This function runs everytime the auth state changes. Use to verify if the user is logged in
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          console.log("USER LOGGED IN");
+        } else {
+          // No user is signed in.
+          console.log("USER NOT LOGGED IN");
+        }
+      });
+    </script>
+  </body>
+</html>
